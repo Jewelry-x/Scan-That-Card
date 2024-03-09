@@ -1,0 +1,4 @@
+card/
+__pycache__/
+cards/
+config.py
