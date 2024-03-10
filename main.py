@@ -17,20 +17,15 @@ def select_file():
 
 def scan():
     # tree.delete(*tree.get_children())
-    print(file_path)
     card_name = extract(file_path)
-    print(card_name)
     game_id = get_game_id(game_name.get())
-    print(game_id)
     cards = find_card_price(game_id, card_name)
-    print(cards)
+
     idx = 0
     for card in cards:
 
         tree.insert("", "end", text=f"Card {idx}", values=(card[0], card[1], card[2]))
         idx += 1
-
-    print(tree)
 
 
 def main():

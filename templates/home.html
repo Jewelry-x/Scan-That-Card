@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid mb-2">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <form method="post" enctype="multipart/form-data">
+                <div class="text-center"> <!-- Center the content -->
+                    <label for="game_select">Select a game:</label>
+                    <select name="game_select" id="game_select" class="form-control">
+                        {% for option in options %}
+                        <option value="{{ option }}" {% if option==selected_game %} selected {% endif %}>{{ option }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="text-center mt-2"> <!-- Center the content -->
+                    <input type="file" name="file">
+                </div>
+                <div class="text-center mt-2"> <!-- Center the content -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

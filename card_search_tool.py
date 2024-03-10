@@ -40,7 +40,7 @@ def find_card_price(game_id, card_name):
                                 card.get("price").get("formatted"),
                                 card.get("properties_hash").get("condition"),
                             ]
-                            print("shit")
+                            
                             cards_to_add.append(card_to_add)
 
                         if card_found:
